@@ -7,6 +7,14 @@ html {
 #about {
     scroll-margin-top: 60px;
 }
+.hero {
+    background-image: url("./image/syukumine.jpg");
+    background-size: cover;      /* 画面いっぱいに表示 */
+    background-position: center; /* 中央を表示 */
+    background-repeat: no-repeat;
+    height: 100vh;               /* 画面いっぱいの高さ */
+    position: relative;
+}
 
 .hero{
     height:100vh;
