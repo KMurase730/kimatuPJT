@@ -1,196 +1,108 @@
 html {
     scroll-behavior: smooth;
 }
-#about {
-    text-align: center;
+
+body {
+    margin: 0;
+    font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.8;
 }
-#about {
-    scroll-margin-top: 60px;
-}
+
+/* --------------------
+   Hero
+-------------------- */
+
 .hero {
+    height: 100vh;
     background-image: url("./image/syukumine.jpg");
-    background-size: cover;      /* 画面いっぱいに表示 */
-    background-position: center; /* 中央を表示 */
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;               /* 画面いっぱいの高さ */
     position: relative;
 }
 
-.hero{
-    height:100vh;
-    background-image:url(images/hero.jpg);
-    background-size:cover;
-    background-position:center;
-    position:relative;
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
 }
 
-.hero::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,.45);
+.hero-overlay {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+    padding: 20px;
 }
 
-.hero-overlay{
-    position:relative;
-    z-index:2;
-
-    height:100%;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-
-    text-align:center;
-    color:white;
-    padding:20px;
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
 }
 
-.hero h1{
-    font-size:4rem;
-    margin-bottom:20px;
+.hero p {
+    font-size: 1.4rem;
+    line-height: 2;
+    margin-bottom: 40px;
 }
 
-.hero p{
-    font-size:1.4rem;
-    line-height:2;
-    margin-bottom:40px;
+.hero-btn {
+    background: #c62828;
+    color: white;
+    padding: 16px 40px;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
-.hero-btn{
-    background:#c62828;
-    color:white;
-    padding:16px 40px;
-    border-radius:40px;
-    text-decoration:none;
-    transition:.3s;
+.hero-btn:hover {
+    background: #e53935;
+    transform: translateY(-3px);
 }
 
-.hero-btn:hover{
-    background:#e53935;
-    transform:translateY(-3px);
+/* --------------------
+   About
+-------------------- */
+
+#about {
+    text-align: center;
+    scroll-margin-top: 60px;
 }
 
-body {
-  margin: 0;
-  padding: 20px;
-  font-family: 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
-  background-color: #f4f4f9;
-  color: #333;
-  line-height: 1.8;
-}
+/* --------------------
+   共通
+-------------------- */
 
-header {
-  background-color: #2c3e50;
-  color: white;
-  padding: 20px 10px;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 3em;
-  margin: 0;
-  color: #f4f4f9;
-  letter-spacing: 2px;
-}
-
-section, main {
-  max-width: 1000px;
-  margin: 40px auto;
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+section,
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-  color: #ffffff;
+    color: white;
 }
 
-h2, h3 {
-  color: #2c3e50;
-  margin-bottom: 20px;
-}
-
-.intro h2 {
-  font-size: 1.8em;
-  border-left: 6px solid #2c3e50;
-  padding-left: 12px;
-}
-
-.intro p, .summary p, section p {
-  line-height: 1.9;
-  font-size: 1.1em;
-}
-
-ul {
-  padding-left: 20px;
-}
-
-li {
-  margin-bottom: 10px;
+h2,
+h3 {
+    color: #2c3e50;
 }
 
 a {
-  color: #da7a30;
-  text-decoration: none;
-}
-
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 30px;
-}
-
-.card {
-  background: white;
-  border-radius: 16px;
-  padding: 30px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-}
-
-.card-title {
-  font-size: 1.5em;
-  color: #2c3e50;
-  margin-bottom: 10px;
-}
-
-.card-description {
-  font-size: 1em;
-  line-height: 1.7;
-}
-
-.summary {
-  margin-top: 50px;
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  font-size: 1.1em;
-  line-height: 1.9;
-}
-
-footer {
-  text-align: center;
-  padding: 30px;
-  color: #777;
-  font-size: 0.9em;
-}
-
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    color: #da7a30;
+    text-decoration: none;
 }
