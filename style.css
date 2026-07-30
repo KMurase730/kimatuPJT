@@ -10,10 +10,6 @@ body {
     line-height: 1.8;
 }
 
-/* --------------------
-   Hero
--------------------- */
-
 .hero {
     height: 100vh;
     background-image: url("./image/syukumine.jpg");
@@ -78,10 +74,6 @@ body {
     text-align: center;
     scroll-margin-top: 60px;
 }
-
-/* --------------------
-   共通
--------------------- */
 
 section,
 main {
